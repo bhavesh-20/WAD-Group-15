@@ -52,7 +52,8 @@
         Share your work and ideas through instantly shareable links.
       </p>
       <section class="block block--light block--skewed-left hero">
-        <form>
+        <form method = "POST" action = "Share" enctype="multipart/form-data">
+          {% csrf_token %}
           <div class="container">
             <div class="form-group" style="padding: 1rem;" >
               <label class="block__header" for="title">Title</label><br>
