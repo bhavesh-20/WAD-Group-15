@@ -51,8 +51,26 @@
       <p class="herotagline">
         Share your work and ideas through instantly shareable links.
       </p>
-      <label class ="btn btn--accent btn--stretched" for="myfile">Upload</label>
-      <input type="file" id="myfile" name="myfile" hidden>
+      <section class="block block--light block--skewed-left hero">
+        <form>
+          <div class="container">
+            <div class="form-group" style="padding: 1rem;" >
+              <label class="block__header" for="title">Title</label><br>
+              <input class="input" type="text" id="title" name="Title"><br>      
+            </div>
+            <div class="feature__content" style="padding: 1rem;">
+              <label class="feature__heading" for="description">Description</label><br>
+              <input class="input" type="text" id="description" name="Description">
+            </div>
+            <div class="feature__content" style="padding: 1rem;">
+              <label class ="btn btn--block btn--outline" for="myfile">Upload</label>
+              <input type="file" id="myfile" name="myfile" hidden>
+            </div>
+            <div class="feature__content" style="padding: 1rem;"> 
+              <button class="btn btn--block btn--accent" onclick="">Share</button>
+            </div>
+          </div>
+        </form>  
     </div>
     <footer class="block block--dark footer">
         <div class="container grid footer__sections">
