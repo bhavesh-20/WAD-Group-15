@@ -13,13 +13,13 @@ def login(request):
         user = auth.authenticate(username= username,password=password)
         if user is not None:
             auth.login(request,user)
-            return redirect("/Accounts/afterlogin")
+            return redirect("/Share")
         else:
             messages.info(request,"invalid credentials")
             return redirect('/Accounts/Login')
     else:
         if request.user.is_authenticated:
-            return redirect("/Accounts/afterlogin")
+            return redirect("/Share")
         return render(request,'login/index.html')
 
 def signup(request):
