@@ -45,34 +45,50 @@
         </ul>
       </nav>
     </header>
-    <div class="container" 
-          style="height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center;"      >
-      <h1 class="blockheading aos-init aos-animate">Upload and Share a File</h1>
-      <p class="herotagline">
-        Share your work and ideas through instantly shareable links.
-      </p>
-      <section class="block block--light block--skewed-left hero">
+
+    <section class="block container block-domain aos-init aos-animate">
+      
+      <div class="container" >
+        <h1 class="blockheading aos-init aos-animate">Upload and Share a File</h1>
+        <p class="herotagline">
+          Share your work and ideas through instantly shareable links.
+        </p>
+      
+        <section class="block block--light block--skewed-left hero">
         <form method = "POST" action = "Share" enctype="multipart/form-data">
           {% csrf_token %}
-          <div class="container">
+          <div class="container grid grid--1x2">
             <div class="form-group" style="padding: 1rem;" >
+
               <label class="block__header" for="title">Title</label><br>
               <input class="input" type="text" id="title" name="Title"><br>      
-            </div>
-            <div class="feature__content" style="padding: 1rem;">
+              
               <label class="feature__heading" for="description">Description</label><br>
               <input class="input" type="text" id="description" name="Description">
+              
+              <div style="padding: 1rem;">
+                <input id="r1" type="radio" name="radio" value="1" checked="checked">
+                <label for="r1">Public</label>
+
+                <input id="r2" type="radio" name="radio" value="2">
+                <label for="r2">Private</label>
+              </div>
+                
             </div>
+            
             <div class="feature__content" style="padding: 1rem;">
+              
               <label class ="btn btn--block btn--outline" for="myfile">Upload</label>
               <input type="file" id="myfile" name="myfile" hidden>
-            </div>
-            <div class="feature__content" style="padding: 1rem;"> 
+              
               <button class="btn btn--block btn--accent" onclick="">Share</button>
+            
             </div>
           </div>
         </form>  
     </div>
+    </section>
+    
     <footer class="block block--dark footer">
         <div class="container grid footer__sections">
           <section class="collapsible collapsible--expanded footer__section">
