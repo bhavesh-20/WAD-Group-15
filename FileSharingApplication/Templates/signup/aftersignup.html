@@ -1,8 +1,36 @@
+{% load static %}
 <html>
     <head>
-        <title>Sign up complete</title>
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta
+              name="description"
+              content="Share your file in less than 60 seconds."
+            />
+            <title>Rocket 🚀 File Share - Share files quickly</title>
+            <link rel="preconnect" href="https://fonts.gstatic.com" />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+              rel="stylesheet"
+            />
+            <link rel="stylesheet" href="{% static 'index_css/normalize.css' %}">
+            <link rel="stylesheet" href="{% static 'index_css/styles.css'%}">
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+          </head>
     </head>
     <body>
-        <p>User successfully created. Click <a href="./Login">here</a> to go to login page.</p>
+        <header>
+            <nav class="nav collapsible">
+              <div class="xx_nav_brand">
+                <img src="{% static './svgs/rocket1.svg' %}" id="xx_brand_logo"> 
+                <span><a href="../" class="normal-link">Rocket Share</a></span>
+              </div>
+              <svg class="icon icon--white nav__toggler">
+                <use xlink:href="{% static './images/sprite.svg' %}#menu"></use>
+              </svg>
+            </nav>
+          </header>
+        <h3>User successfully created. Click <u><a href="./Login">here</a></u> to go to login page.</h3>
     </body>
 </html>
